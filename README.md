@@ -77,6 +77,7 @@ Joka tapauksessa Rahti ei aja kontteja root käyttäjänä ja keskeyttää ajon.
 Jolloin tajusin että minun tulee Dockerfilessä luoda uusi hakemisto /workspace, jolle annetaan group 0, jotta random UID:lla ajettava kontti pääsee käsiksi SQLiteen. Joten loin workspace hakemiston ja muutin sen groupiksi 0 eli root group (chgrp -R 0 / workspace), jonka jälkeen annoin tälle ryhmälle samat oikeudet kuin tiedoston omistajalla (chmod -R g=u /app). Pohdiskelu apua ja henkistä tukea aiheesta sain pikku serkultani Developer Adam Wallinilta mutta tiedon haun ja lopullisen selvityksen tein itse. Tämän jälkeen Backend rupesi pyörimään osoitteessa: [https://backend-git-varustevahti.2.rahtiapp.fi](https://backend-git-varustevahti.2.rahtiapp.fi).
 
 Ongelmat eivät jääneet tähän vaan tämän jälkeen ryhmäläinen lähetti viestin:
+
 **ainakaan kuvan lataus ei toiminut tuo auto toiminnon kanssa. tuli vaan virhe:**
 ```json
 {
@@ -226,10 +227,12 @@ Kun ottaa EAS workflowit käyttöön tulee tehdä muutama asia ennen kuin kirjoi
    ```bash
 npx create-expo-app@latest
    ```
+
 3. Linkittää EAS projekti, lokaaliin projektiin
-```bash
+   ```bash
 npx eas-cli@latest init
-```
+   ```
+
 4. Lisätä eas.json projektin juureen.
    ```bash
 touch eas.json && echo "{}" > eas.json
