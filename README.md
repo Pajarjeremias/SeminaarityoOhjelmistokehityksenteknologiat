@@ -1,6 +1,18 @@
 # Seminaari työ
 Työn tavoitteena on Ohjelmistoprojekti 2 kurssin, Varustevahti- sovelluksen backendin kontitus ja käyttöön otto pilvipalvelussa, sekä rakentaa projektin Continuous Integration ja Continuous Delivery ratkaisuja. Käsittelen työssä Dockeria, pilviympäristöjä, CI/CD-automaatioita Github actionsien avulla ja koneoppimismallien ajamista tuotantoympäristössä. Sovellus on ryhmätyönä toteutettu mobiili laitteella toimiva kuvantunnistus ohjelma.
 
+# Seminaarityön video linkki
+
+[https://haagahelia-my.sharepoint.com/:v:/g/personal/bhd730_myy_haaga-helia_fi/IQC2zIKBMxcyRJrclIJSJsWBAQb7clJ-95iz5I7ajtmmJdM?e=AvWaSP](https://haagahelia-my.sharepoint.com/:v:/g/personal/bhd730_myy_haaga-helia_fi/IQC2zIKBMxcyRJrclIJSJsWBAQb7clJ-95iz5I7ajtmmJdM?e=AvWaSP)
+
+# Repositoriot joihin tehtävä kohdistuu
+
+Frontend: [https://github.com/Varustevahti/Frontend/tree/main](https://github.com/Varustevahti/Frontend/tree/main)
+
+Backend: [https://github.com/Varustevahti/Backend](https://github.com/Varustevahti/Backend)
+
+Varustevahti backend url ja interactive docs: [https://backend-git-varustevahti.2.rahtiapp.fi/docs](https://backend-git-varustevahti.2.rahtiapp.fi/docs)
+
 ## Docker
 Minun tehtäväkseni muodostui DevOps roolin vuoksi Backendin laittaminen palvelimelle. Meidän Backendissä on mukana AI_Model joka tunnistaa sille opetettujen mallien perusteella kuvan, jonka käyttäjä joko valitsee galleriasta tai ottaa kännykän kameralla.
 
