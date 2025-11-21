@@ -241,21 +241,21 @@ Omasta mielestäni EAS workflowien käyttö on erittäin hyödyllistä mobiili s
 Koska emme julkaise expo sovellusta minnekkään ja kaikki dokumentaatio tästä aiheesta on pelkästään buildausta varten, tein alustavan workflowin, joka voisi toimia jos joskus joku haluaa Varustevahdin expo osuuden julkaistavaksi. 
 
 Kun ottaa EAS workflowit käyttöön tulee tehdä muutama asia ennen kuin kirjoitetut yml tiedostot saa toimintaan:
+
 1. Täytyy kirjautua Expo accountille
+   
 2. Luoda projekti
-   ```bash
+   
 npx create-expo-app@latest
-   ```
 
 3. Linkittää EAS projekti, lokaaliin projektiin
-   ```bash
+   
 npx eas-cli@latest init
-   `````````
 
 4. Lisätä eas.json projektin juureen.
-   ```bash
+   
 touch eas.json && echo "{}" > eas.json
-   ```
+   
 
 Tämän luodaan kansiot .eas ja workflow, .eas/workflows, jonne voidaan alkaa luomaan workflow tiedostoja yml muodossa
 Tämä workflow rakentaa rinnakkain Android ja iOS julkaisu versiot projektista. Tähän voisi myös lisätä automaattisen julkaisun sovellus kauppoihin.
@@ -289,7 +289,7 @@ jobs:
 #        platform: android
 #    build_ios:
 #      type: build
-```````````
+```
 Tämä taas rakentaa Androidille kehittämis buildin ja iOS:lle kehittämist buildin ja simulaattorin.
 
 ```bash
