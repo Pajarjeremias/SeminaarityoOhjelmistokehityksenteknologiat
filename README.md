@@ -227,7 +227,7 @@ jobs:
         # This is because there are issues with app.json and dependencies on expo doctor.
         # (Gtihub Docs. s.a.)
 ```
-Tuntui että jotain pitäisi vielä saada tuotettua ja halusin kokeilla että onnistunko github actioneita käyttämällä tarkistamaan Rahdin buildin onnistumisen. Suurin ongelma ehkä on se että jokainen build kestää noin 16 minuuttia, joten yml tiedostoon tulee käyttää bash scriptiä sivuston pingaamiseen ja kun build onnistuu, niin testaamaan että sen tärkein kuvantunnistus toiminto toimii.
+Tuntui että jotain pitäisi vielä saada tuotettua ja halusin kokeilla että onnistunko github actioneita käyttämällä tarkistamaan Rahdin buildin onnistumisen. Suurin ongelma ehkä on se että jokainen build kestää noin 16 minuuttia, joten yml tiedostoon tulee käyttää bash scriptiä sivuston pingaamiseen ja kun build onnistuu, niin testaamaan että sen tärkein kuvantunnistus toiminto toimii. En saanut tätä tehtyä, lisätään jatko kehitykseksi
 
 ### Eas workflows
 Eas Workflowit on React Native CI/CD palvelu, jotka on tehty helpoittamaan sovelluksen julkaisemista. Ne tarjoaa valmiiksi määriteltyjä työkulkuja, joilla voi muun muuassa rakentaa, julkaista, päivittää sovellusta ja ajaa maestro testejä. Kaikki työtyypit ajetaan EAS palvelussa, joten täytyy vain hallita yhtä YAML tiedostojen kokonaisuutta. Kaikista ajokerroista syntyvät artifaktit näkyvät yhdessä paikassa expo.devissä. (Expo. 2025)
@@ -258,7 +258,7 @@ touch eas.json && echo "{}" > eas.json
 Tämän luodaan kansiot .eas ja workflow, .eas/workflows, jonne voidaan alkaa luomaan workflow tiedostoja yml muodossa
 Tämä workflow rakentaa rinnakkain Android ja iOS julkaisu versiot projektista. Tähän voisi myös lisätä automaattisen julkaisun sovellus kauppoihin.
 
-```yml
+```yaml
 # Source: https://www.youtube.com/watch?v=OJ2u9tQCpr4
 name: Create Production Build
 
