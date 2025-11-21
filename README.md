@@ -28,7 +28,7 @@ Ensimmäinen versio:
 FROM python:3.12-slim
 
 # All commands about to happen happens in this directory
-WORKDIR /app
+WORKDIR /workspace
 
 # Linux commads, for upgrade and install, flags first mean yes and second not to install "recommended dependencies packages" making it lighter. 
 # Source: "https://ubuntu.com/blog/we-reduced-our-docker-images-by-60-with-no-install-recommends"
@@ -50,11 +50,6 @@ COPY AI_Model ./AI_Model
 
 # making folder for save_upload to save pictures, -p flag creates them if they do not already exist.
 RUN mkdir -p /app/uploads
-
-#jälkeenpäin jouduin lisäämään
-    \
- && chgrp -R 0 /app \
- && chmod -R g=u /app
 
 # Database path
 ENV DATABASE_URL=sqlite:///./varustevahti.db
@@ -141,6 +136,12 @@ ENV DATABASE_URL=sqlite:///./varustevahti.db
 EXPOSE 8080
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
 ```
+
+En muista tasan tarkkaan missä kohtaa tajusin ettei
+```bash
+RUN apt-get update && apt-get install -y --no-install-recommends && rm -rf /var/lib/apt/lists/*
+```
+komentoa tarvita ollenkaan, sillä ei ole mitään mitä Linuxilla pitäisi tähän asti käsitellä. Ja näin sain pienennettyä imagea.
 
 ### Hienosäätö
 
