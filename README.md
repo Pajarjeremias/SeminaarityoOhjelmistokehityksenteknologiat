@@ -5,6 +5,8 @@ Työn tavoitteena on Ohjelmistoprojekti 2 kurssin, Varustevahti- sovelluksen bac
 
 [https://haagahelia-my.sharepoint.com/:v:/g/personal/bhd730_myy_haaga-helia_fi/IQC2zIKBMxcyRJrclIJSJsWBAQb7clJ-95iz5I7ajtmmJdM?e=AvWaSP](https://haagahelia-my.sharepoint.com/:v:/g/personal/bhd730_myy_haaga-helia_fi/IQC2zIKBMxcyRJrclIJSJsWBAQb7clJ-95iz5I7ajtmmJdM?e=AvWaSP)
 
+Videossa kuuluva hyrinä tulee kannettavasta tietokoneestani, puhe onneksi kuuluu.
+
 # Repositoriot joihin tehtävä kohdistuu
 
 Frontend: [https://github.com/Varustevahti/Frontend/tree/main](https://github.com/Varustevahti/Frontend/tree/main)
@@ -248,7 +250,7 @@ npx create-expo-app@latest
 3. Linkittää EAS projekti, lokaaliin projektiin
    ```bash
 npx eas-cli@latest init
-   ```
+   `````````
 
 4. Lisätä eas.json projektin juureen.
    ```bash
@@ -287,7 +289,7 @@ jobs:
 #        platform: android
 #    build_ios:
 #      type: build
-```
+```````````
 Tämä taas rakentaa Androidille kehittämis buildin ja iOS:lle kehittämist buildin ja simulaattorin.
 
 ```bash
